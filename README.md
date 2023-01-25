@@ -173,6 +173,14 @@ Minecraft має спеціальну команду «Заповнити бло
 | Код       | ![](https://lh4.googleusercontent.com/bmb0P4C-GUJ9jLj7FymUhgevFNqY0HFZ18cSlym1PpgnBLCNcZ2e1rXv1rbidZKmiTpEPt4pUN8hc81quLGpNzXKfTYT741R7hzG-Ka8DXnjyffXDueUUGhhrZ6eYVBap9O0XBHff4F397f5zYmm1y2qZy-r\_ketfzCRfQQ2cb1bTbyJJr\_0-zcZnf7L)![](https://lh4.googleusercontent.com/n\_FAnoLCdCZvMVY8\_COlKwUcoX2VNH61FSd69JI7iACltbY4ZuRFf\_b9BfTBJy-XtJjTi\_gta3di7RIVIHEUm2AnHJxEpsWVssU98zYFM3MKCyR-tCze8zG1jdGY6ZZMqyetMjHvNE9t3t\_AMbbsmoilAOpQdQWN9IvoUeZvqobwWnAJuLCY5QdTDVT6) |
 | Результат | ![](https://lh5.googleusercontent.com/fibWCyNJb8kXEJBBaQSAAxH4wIgK355-kJWYW25OFVlLYGQMTd7y01OtxIYJ9bw208RXWLqSwg-WQIAxCnpL7IBt2Y43eSKmKM0H4vet3YicknGReDIC3Xaf-Dc44X2FJyJP18ZLu8yhNeuuZwZdw0tfZHUGn1t2KYxl\_PWhz79q0CqvW2ndnxd8r5-i)![](https://lh5.googleusercontent.com/uqdfFFwMjqo28BJyGo3Q1PNAVBUTacW0FoDyI2-Ewn8cJmPAfRJFwRmYZ7tfn4whkhtmm8VT7haF8zzI-Y41wbrgwve1oVZWiVCLhebwT6QTHxx3\_svNBOwrWxHtj3CIEOpovQkotBh3peYS3UmMO-m2liMd5ZrCcDdxHImk9UsELQLp26y\_5jrPXwXx)     |
 
+### [Голем](https://makecode.com/\_9jkPW1PE05DU)
+
+|            |                                         |
+| ---------- | --------------------------------------- |
+| Завдання:  | Використовуючи агента, побудуйте голема |
+| Результат: | ![](.gitbook/assets/3.png)              |
+| Код:       | ![](.gitbook/assets/4.png)              |
+
 ## Самостійно
 
 1. Напишіть код, щоб було прокладено лінію з **5 блоків** **цегли** від координати (\~0;\~0;\~1) до координати (\~0;\~0;\~5)&#x20;
