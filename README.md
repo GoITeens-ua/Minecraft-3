@@ -153,7 +153,7 @@ Minecraft має спеціальну команду «Заповнити бло
 | **Назва**     | **Линія блоків**                                                                                                              |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | **Завдання**  | <ol><li>Прапор України</li><li>Прапор Польщі</li><li>Прапор Угорщині</li><li>Прапор Болгарії</li><li>Прапор Австрії</li></ol> |
-| **Код**       | <p><img src=".gitbook/assets/image (2).png" alt=""><br><img src=".gitbook/assets/image (1).png" alt=""></p>                   |
+| **Код**       | <p><img src=".gitbook/assets/image (2) (1).png" alt=""><br><img src=".gitbook/assets/image (1).png" alt=""></p>               |
 | **Результат** | <p><img src=".gitbook/assets/image.png" alt=""><br><img src=".gitbook/assets/image (3).png" alt=""></p>                       |
 
 ## Творче завдання
