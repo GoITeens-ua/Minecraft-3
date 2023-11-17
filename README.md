@@ -164,7 +164,7 @@ Coloque banderas en los mástiles.
 ¡Listo! ¡Son los mejores!:tada:
 {% endhint %}
 
-![Resultados del día](<.gitbook/assets/Group 2395 укр.png>)
+![Resumen de la clase](<.gitbook/assets/Group 2395 укр.png>)
 
 ## **Tarea**
 
