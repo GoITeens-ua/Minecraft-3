@@ -1,217 +1,189 @@
-# Подорож до Стародавнього Єгипту
+# Viaje al Antiguo Egipto
 
-#### Опис
+#### Descripción
 
 {% hint style="success" %}
-Вирушаймо в подорож Стародавнім світом! Першою зупинкою буде Стародавній Єгипет.&#x20;
+¡Embarquémonos en un viaje al mundo antiguo! Nuestra primera parada será en el Antiguo Egipto.&#x20;
 
-Сьогодні ми дізнаємося все про систему координат у Minecraft і навчимося визначати своє місце у просторі за допомогою координат. Навчимося використовувати систему координат та за її допомогою будувати різні елементи відносно гравця. А ще — зробимо футбольне поле у Стародавньому Єгипті!
+Hoy aprenderemos todo sobre el sistema de coordenadas en Minecraft y cómo determinar nuestra ubicación en el espacio utilizando coordenadas. Aprenderemos a utilizar este sistema de coordenadas para construir diferentes elementos en relación al jugador. ¡También construiremos un campo de fútbol en el Antiguo Egipto!
 {% endhint %}
 
-## Згадаймо🤔
+## Recordemos 🤔
 
-1. Як створити квадрат потрібного розміру?&#x20;
-2. Як розрахувати периметр та площу фігури?&#x20;
-3. Чи для будь-якої фігури можливо розрахувати площу?
+1. ¿Cómo crear un cuadrado del tamaño deseado?&#x20;
+2. ¿Cómo calcular el perímetro y el área de una figura?
+3. ¿Es posible calcular el área de cualquier figura?
 
-### Сьогодні ми:
+### Hoy haremos lo siguiente:
 
-1. Дізнаємося про систему координат в Minecraft.&#x20;
-2. Навчимося створювати елементи за допомогою відносних координат.&#x20;
-3. Самостійно прокладемо лінію з блоків із використанням відносних координат.&#x20;
-4. Створимо квадрати та прямокутники з використанням відносних координат.&#x20;
-5. Створимо футбольне поле та прапори різних країн.
+1. Aprenderemos sobre el sistema de coordenadas en Minecraft.&#x20;
+2. Aprenderemos a crear elementos utilizando coordenadas relativas.&#x20;
+3. Traceremos una línea de bloques usando coordenadas relativas&#x20;
+4. Crearemos cuadrados y rectángulos utilizando coordenadas relativas.&#x20;
+5. Crearemos un campo de fútbol y banderas de diferentes países.
 
-> **Усі ці навички обов'язково знадобляться під час виконання вашого проєкту!**
+> **¡Todas estas habilidades serán necesarias para llevar a cabo su proyecto!**
 
-### **Теорія**
+### Teoría
 
-**Координати** — це сукупність значень, що утворює систему координат, призначену для визначення місця розташування об'єктів в ігровому світі.
+Las **coordenadas** son un conjunto de valores que forman un sistema de coordenadas diseñado para determinar la ubicación de objetos en el mundo del juego.
 
 {% hint style="info" %}
-**Система координат** — спосіб визначати положення та переміщення точки чи тіла за допомогою чисел або інших символів.
+Un **sistema de coordenadas** es una forma de determinar la posición y el movimiento de un punto o un cuerpo mediante números u otros símbolos.
 {% endhint %}
 
-У Minecraft використовується тривимірна система координат, осі якої позначені як X, Y і Z. Осі Z і X відміряють горизонтальні напрямки, Y відміряє вертикальний напрямок (висота).&#x20;
+En Minecraft se utiliza un sistema de coordenadas tridimensional, cuyos ejes se denotan como X, Y y Z. Los ejes Z y X miden direcciones horizontales, mientras que Y mide la dirección vertical (altura).&#x20;
 
-Точка з координатами x=0, z=0, y=0 (точка) є початком відліку, у якому перетинаються три взаємно перпендикулярні осі.
+El punto con coordenadas x=0, z=0, y=0 (punto) es el punto de referencia donde se cruzan los tres ejes perpendiculares entre sí.
 
 ![](<.gitbook/assets/image (14).png>)
 
 ![](.gitbook/assets/Координати.png)
 
-Під час створення світу (а також після його створення) в налаштуваннях можна ввімкнути відображення координат:
+Durante la creación del mundo (y también después de su creación), en la configuración se puede habilitar la visualización de coordenadas:
 
 ![](<.gitbook/assets/image (20).png>)
 
-Після увімкнення ми отримаємо відображення координат:
+Después de habilitarlo, obtendremos la visualización de coordenadas:
 
 ![](<.gitbook/assets/image (15).png>)
 
-Ми бачимо три числа через кому. За замовчуванням гравець перебуває в точці з координатами (0; 4; 0).
+Vemos tres números separados por comas. Por defecto, el jugador se encuentra en el punto con coordenadas (0; 4; 0).
 
-Тобто це означає, що гравець перебуває в точці, у якій перша координата (X-координата) і третя координата (Z-координата) дорівнюють нулю. X- і Z-координати демонструватимуть напрямок руху вперед-назад (північ-південь) і вправо-вліво (захід-схід).
+Esto significa que el jugador se encuentra en un punto donde la primera coordenada (coordenada X) y la tercera coordenada (coordenada Z) son igual a cero. Las coordenadas X y Z indicarán la dirección de movimiento hacia adelante y hacia atrás (norte-sur) y hacia la derecha y hacia la izquierda (oeste-este).
 
 ![](<.gitbook/assets/image (7).png>)
 
 
 
-Кожна вісь має **додатний і від'ємний** напрямок. Додатні напрямки:
+Cada eje tiene una dirección **positiva y negativa**. Direcciones positivas:
 
-* Для осі X — схід
-* Для осі Y — верх карти (висота)
-* Для осі  Z — південь
+* Para el eje X: este&#x20;
+* Para el eje Y: arriba en el mapa (altura)&#x20;
+* Para el eje Z: sur
 
-Від'ємні напрямки (знак "-" перед числом):
+Direcciones negativas (signo "-" antes del número):
 
-* Для осі X — захід
-* Для осі Y — низ карти (глибина)
-* Для осі Z — північ
+* Para el eje X: oeste&#x20;
+* Para el eje Y: abajo en el mapa (profundidad)&#x20;
+* Para el eje Z: norte
 
 ![](<.gitbook/assets/image (4).png>)
 
 ![](.gitbook/assets/telegram-cloud-photo-size-2-5420482988409470280-y.jpg)
 
-### Потренуємося
+### Entrenemos
 
-| Завдання               | Код                                                                                                                                                                                                                                    |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Насипаємо кругом пісок | ![](https://lh5.googleusercontent.com/G1SEBuxCEDZSbCwandl4PmdJjlLAyTVspxZsPSjEXlLWg8uRN4r4VxiQB5yWJJZ3lPETrjbRhGeDJyo3ust3Jz9j-1UYNmRioQHB269UJgI8nRBTETmGW-Y\_U90Hja6uo9ULyP0dF1ke0xieZa73aSL--xG61MTkg-F9nqXfBw7uvDqF7ANiwQutiQQO)   |
-| Чистимо простір        | ![](https://lh6.googleusercontent.com/0ADq1uShcHYHfFE8OG-WTEemqPchMpXLtsGqE7GVERFcP64sSzxGL\_9s2TwECTukEeQ4l20gWpKqWwsiwKGGx\_32K3DyI18FShta5lnyQTymEQ3Wd-k-6ElCv9bvQXOcFY5WlUBVpSeFxSmECALxMfHiswX2cd5hdtKO3lByJAcHUyUw8cNinaPz4DK4)  |
-| Тільки під ногами      | ![](https://lh5.googleusercontent.com/Wcw1CEFys3EjNeYtiNGtUDdPL7hsOi-2O5w1gy7k-xqclnHVSk1YFR0CizjR0\_ZHtNGwQ8qNXAe2f26BV4FvMstj9kyAfkSIJdLRvQwiLTubgL1YQmnS52HZM51djYrM3f3L3htywWsW5sZKIIPhs6g8XJTdvE4iRxmv2kELocOQQbYlMwVoPk5mzj42)   |
-| Побудуємо стіну        | ![](https://lh3.googleusercontent.com/V6HxN3ksEW9kn\_kkHUllUOErONUYuycZcUzaZNldN2A\_Plw\_x4gTQdt2sxwTSMPbUalixT8tPC-kjFRLWnwR6Dju5GBMUiLmxw-f07M2CtmRP9s4cnC80CRJjF5T86WVbHVhz0ZK1BsEtUwCbYaOa0ZwzEB3UZ20D4F1xyhvJpIzZm57osLKrMjzrSZ7) |
+<table><thead><tr><th width="305">Tarea</th><th>Código</th></tr></thead><tbody><tr><td>Echemos arena alrededor</td><td><img src="https://lh5.googleusercontent.com/G1SEBuxCEDZSbCwandl4PmdJjlLAyTVspxZsPSjEXlLWg8uRN4r4VxiQB5yWJJZ3lPETrjbRhGeDJyo3ust3Jz9j-1UYNmRioQHB269UJgI8nRBTETmGW-Y_U90Hja6uo9ULyP0dF1ke0xieZa73aSL--xG61MTkg-F9nqXfBw7uvDqF7ANiwQutiQQO" alt=""></td></tr><tr><td>Limpiemos el espacio</td><td><img src="https://lh6.googleusercontent.com/0ADq1uShcHYHfFE8OG-WTEemqPchMpXLtsGqE7GVERFcP64sSzxGL_9s2TwECTukEeQ4l20gWpKqWwsiwKGGx_32K3DyI18FShta5lnyQTymEQ3Wd-k-6ElCv9bvQXOcFY5WlUBVpSeFxSmECALxMfHiswX2cd5hdtKO3lByJAcHUyUw8cNinaPz4DK4" alt=""></td></tr><tr><td>Solo bajo nuestros pies</td><td><img src="https://lh5.googleusercontent.com/Wcw1CEFys3EjNeYtiNGtUDdPL7hsOi-2O5w1gy7k-xqclnHVSk1YFR0CizjR0_ZHtNGwQ8qNXAe2f26BV4FvMstj9kyAfkSIJdLRvQwiLTubgL1YQmnS52HZM51djYrM3f3L3htywWsW5sZKIIPhs6g8XJTdvE4iRxmv2kELocOQQbYlMwVoPk5mzj42" alt=""></td></tr><tr><td>Construyamos un muro</td><td><img src="https://lh3.googleusercontent.com/V6HxN3ksEW9kn_kkHUllUOErONUYuycZcUzaZNldN2A_Plw_x4gTQdt2sxwTSMPbUalixT8tPC-kjFRLWnwR6Dju5GBMUiLmxw-f07M2CtmRP9s4cnC80CRJjF5T86WVbHVhz0ZK1BsEtUwCbYaOa0ZwzEB3UZ20D4F1xyhvJpIzZm57osLKrMjzrSZ7" alt=""></td></tr></tbody></table>
 
-## **МегаСтрибок**
+## **SuperSalto**
 
 <figure><img src="https://lh4.googleusercontent.com/8x25zHY1ZE8xzQ7BBU6795OpEKTAfJuwlnWvutWqFHYEsvIrSJl2WmyZXDyF8DbBOMppiSJzuAn21eTeg0UfUcw6K-HLQI-1ztCkQCj_cA7lQKv45Hu2fBuJPiaKTe_DnbddUpACrvewhe8M5ZAoMfwgxpO8rgXPHG0TuxLDe5FB2upzb6BPSsjcqR-t" alt=""><figcaption></figcaption></figure>
 
-## Основні завдання
+## Tareas principales
 
 {% hint style="info" %}
-Уявімо, що ми з вами потрапили у Стародавній Єгипет, який славиться своїми пірамідами. Їхнім будівництвом займалися тисячі людей, але завжди будь-яка піраміда починалась із одного блоку. Навчаймося їх будувати, щоб надалі створити власну піраміду!
+Imaginemos que hemos viajado juntos al antigua Egipto, conocido por sus pirámides. Miles de personas participaron en su construcción, pero cada pirámide siempre comenzaba con un solo bloque. ¡Aprendamos a construirlos para luego crear nuestra propia pirámide!
 {% endhint %}
 
-Minecraft має спеціальну команду «Заповнити блоками», яка дозволяє ставити блоки по координатах. Координати прокладаються за допомогою відносних координат (де мають бути розміщені блоки відносно гравця).
+Minecraft tiene un comando especial llamado "Llenar con bloques" que permite colocar bloques en coordenadas específicas. Las coordenadas se establecen utilizando coordenadas relativas (donde los bloques se posicionan en relación al jugador).
 
-| **Назва**     | **Блоки**                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Завдання**  | <ol><li>Прокладіть лінію з <strong>6 блоків піщаника</strong> від координати (~0;~0;~0) до координати (~5;~0;~0)</li><li>Прокладіть лінію з <strong>6 блоків граніту</strong> від координати (~0;~0;~0) до координати (~5;~0;~0)</li><li>Прокладіть лінію з <strong>5 блоків глини</strong> від координати (~0;~0;~1) до координати (~0;~0;~5)</li><li>Прокладіть лінію з <strong>5 блоків цегли</strong> від координати (~0;~0;~1) до координати (~0;~0;~5)</li></ol> |
-| **Код**       | ![](<.gitbook/assets/image (18).png>)                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **Результат** | ![](<.gitbook/assets/image (21).png>)                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+<table data-header-hidden><thead><tr><th width="183.7386053194607"></th><th width="403"></th></tr></thead><tbody><tr><td><strong>Nombre</strong></td><td><strong>Bloques</strong></td></tr><tr><td><strong>Tareas</strong></td><td><ol><li>Coloca una línea de <strong>6 bloques de arenisca</strong> desde la coordenada (~0;~0;~0) hasta la coordenada (~5;~0;~0) </li><li>Coloca una línea de <strong>6 bloques de granito</strong> desde la coordenada (~0;~0;~0) hasta la coordenada (~5;~0;~0) </li><li>Coloca una línea de <strong>5 bloques de arcilla</strong> desde la coordenada (~0;~0;~1) hasta la coordenada (~0;~0;~5) </li><li>Coloca una línea de <strong>5 bloques de ladrillo</strong> desde la coordenada (~0;~0;~1) hasta la coordenada (~0;~0;~5)</li></ol></td></tr><tr><td><strong>Código</strong></td><td><img src=".gitbook/assets/image (18).png" alt=""></td></tr><tr><td><strong>Resultado</strong></td><td><img src=".gitbook/assets/image (21).png" alt=""></td></tr></tbody></table>
 
-Якщо в команду «Заповнити блоками» вводити координати зі зміною не по одному напрямку, а по двох, то отримаємо прямокутник. Потренуймося!
+Si en el comando "Rellenar con bloques" ingresamos coordenadas en dos direcciones en lugar de una, obtendremos un rectángulo. ¡Practiquemos!
 
-| **Назва**     | **Блоки**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Завдання**  | <ol><li>Створіть квадрат <strong>5 x 5</strong> з блоків <strong>піщаника</strong> від координати (~1;~0;~1) до координати (~5;~0;~5)</li><li>Створіть квадрат <strong>4 х 4</strong> з блоків <strong>граніту</strong> від координати (~1;~0;~1) до координати (~4;~0;~4)</li><li>Створіть квадрат <strong>6 х 6</strong> з блоків <strong>глини</strong> від координати (2;~0;~2) до координати (~7;~0;~7)</li><li>Створіть квадрат <strong>7 х 7</strong> з блоків <strong>цегли</strong> (координати оберіть свої).</li></ol> |
-| **Код**       | ![](<.gitbook/assets/image (19).png>)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Результат** | ![](<.gitbook/assets/image (13).png>)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+<table data-header-hidden><thead><tr><th width="183.7386053194607"></th><th width="403"></th></tr></thead><tbody><tr><td><strong>Nombre</strong></td><td><strong>Bloques</strong></td></tr><tr><td><strong>Tareas</strong></td><td><ol><li>Crea un cuadrado de <strong>5 x 5</strong> con bloques de <strong>arenisca</strong> desde la coordenada (~1;~0;~1) hasta la coordenada (~5;~0;~5) </li><li>Crea un cuadrado de <strong>4 x 4</strong> con bloques de <strong>granito</strong> desde la coordenada (~1;~0;~1) hasta la coordenada (~4;~0;~4) </li><li>Crea un cuadrado de <strong>6 x 6</strong> con bloques de <strong>arcilla</strong> desde la coordenada (2;~0;~2) hasta la coordenada (~7;~0;~7) </li><li>Crea un cuadrado de <strong>7 x 7</strong> con bloques de <strong>ladrillo</strong> (elija sus propias coordenadas)</li></ol></td></tr><tr><td><strong>Código</strong></td><td><img src=".gitbook/assets/image (19).png" alt=""></td></tr><tr><td><strong>Resultado</strong></td><td><img src=".gitbook/assets/image (13).png" alt=""></td></tr></tbody></table>
 
 {% hint style="success" %}
-Якщо ви впорались із усіма основними завданнями, перейдіть до додаткового. Його виконання дозволить вам удосконалити набуті навички!
+Si ha completado todas las tareas principales, pase a la tarea adicional. ¡Completarla le permitirá mejorar sus habilidades adquiridas!
 {% endhint %}
 
-## Додаткове завдання
+## Tarea adicional
 
-### Футбольне поле
+### Campo de fútbol
 
 {% hint style="info" %}
-Учені вважають, що батьківщиною футболу є Стародавній Єгипет! Факт ігор із м'ячем підтверджується археологічними знахідками у гробницях, збудованих кілька тисячоліть тому. Під час розкопок було знайдено багато м'ячів, набитих папірусом, деревиною пальм та обтягнутих шкірою чи тканиною. Як виявилось, представники цивілізацій, що існували задовго до початку нашої ери, були не лише чудовими воїнами, скотарями та землеробами, а й відмінними спортсменами! Але вони не мали справжнього футбольного поля, відомого нам. Допоможімо давнім єгиптянам пограти у сучасний футбол та зробімо поле!
+Los científicos creen que la cuna del fútbol es el Antiguo Egipto. El hecho de jugar con una pelota se confirma con hallazgos arqueológicos en tumbas construidas hace miles de años. Durante las excavaciones, se encontraron muchas pelotas hechas de papiro, madera de palma y cubiertas de cuero o tela. Resulta que los representantes de las civilizaciones que existieron mucho antes de nuestra era no solo fueron excelentes guerreros, pastores y agricultores, ¡sino también deportistas excepcionales! Sin embargo, no tenían un campo de fútbol real como lo conocemos. ¡Ayudemos a los antiguos egipcios a jugar al fútbol moderno y construyamos un campo!
 {% endhint %}
 
-Спочатку ми зробимо розмітку футбольного поля, а далі розмістимо збоку поля прапори різних країн.
+Primero haremos la marcación del campo de fútbol, y luego colocaremos banderas de diferentes países en un lado del campo.
 
 ![](<.gitbook/assets/image (11).png>)
 
-### Код для розмітки футбольного поля:
+### Código para marcar un campo de fútbol:
 
-| Частина 1                             | Частина 2                             |
-| ------------------------------------- | ------------------------------------- |
-| ![](<.gitbook/assets/image (12).png>) | ![](<.gitbook/assets/image (8).png>)  |
-| ![](<.gitbook/assets/image (10).png>) | ![](<.gitbook/assets/image (6).png>)  |
-|                                       | ![](<.gitbook/assets/image (16).png>) |
+<table><thead><tr><th width="376.3333333333333">Parte 1</th><th width="379">Parte 2</th></tr></thead><tbody><tr><td><img src=".gitbook/assets/image (12).png" alt=""></td><td><img src=".gitbook/assets/image (8).png" alt=""></td></tr><tr><td><img src=".gitbook/assets/image (10).png" alt=""></td><td><img src=".gitbook/assets/image (6).png" alt=""></td></tr><tr><td></td><td><img src=".gitbook/assets/image (16).png" alt=""></td></tr></tbody></table>
 
-### Прапори
+### Banderas
 
 {% hint style="info" %}
-**Прапори в Minecraft** — це кілька різнокольорових прямокутників, які розміщуються поряд.
+Las **banderas en Minecraft** son varios rectángulos de diferentes colores que se colocan juntos.
 {% endhint %}
 
-Для розрахунку координат прапора можна використовувати два способи:
+Para calcular las coordenadas de la bandera, puedes usar dos métodos:
 
-1. Побудувати аналогійний елемент «вручну» та порахувати координати в самому Minecraft.&#x20;
-2. Зробити схему майбутніх елементів у електронних таблицях (про них поговоримо докладніше).&#x20;
+1. Construir un elemento similar manualmente y calcular las coordenadas en el propio Minecraft.&#x20;
+2. Crear un esquema de los futuros elementos en hojas de cálculo electrónicas (hablaremos más detalladamente sobre esto).&#x20;
 
-Координати, вказані після символу, звітують про положення гравця (це називається відносними координатами). Програма відраховує від гравця відстань та ставить блок у відповідне місце.
+Las coordenadas que se indican después del símbolo representan la posición del jugador (esto se llama coordenadas relativas). El programa calcula la distancia desde el jugador y coloca el bloque en el lugar correspondiente.&#x20;
 
-Перша координата – це координата по осі X (ширина), Y (висота), Z (довжина). На першому етапі ми будемо працювати тільки з X та Z (блоки розміщуватимуться на тій же висоті, на якій знаходиться гравець).
+La primera coordenada es la coordenada en el eje X (ancho), Y (altura), Z (longitud). En la primera etapa, trabajaremos solo con X y Z (los bloques se colocarán a la misma altura en la que se encuentra el jugador).
 
 ![](<.gitbook/assets/image (9).png>)![](<.gitbook/assets/image (17).png>)
 
-Лівий нижній кут синьої частини українського прапора (синього прямокутника) знаходиться у точці (-5; -3), а правий верхній у точці (-4; 3). Відповідно до команди з розміщення блоків ми напишемо, що необхідно заповнити блоками простір від точки (-5; 0; -3) до точки (-4; 0; 3). Аналогійно розраховуються координати жовтої частини прапора.
+El rincón inferior izquierdo de la parte azul de la bandera ucraniana (el rectángulo azul) se encuentra en el punto (-5; -3), y el rincón superior derecho en el punto (-4; 3). Según las instrucciones para colocar bloques, escribiremos que es necesario llenar el espacio con bloques desde el punto (-5; 0; -3) hasta el punto (-4; 0; 3). Las coordenadas de la parte amarilla de la bandera se calculan de manera similar.
 
-| **Назва**     | **Линія блоків**                                                                                                              |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| **Завдання**  | <ol><li>Прапор України</li><li>Прапор Польщі</li><li>Прапор Угорщині</li><li>Прапор Болгарії</li><li>Прапор Австрії</li></ol> |
-| **Код**       | <p><img src=".gitbook/assets/image (2) (1).png" alt=""><br><img src=".gitbook/assets/image (1).png" alt=""></p>               |
-| **Результат** | <p><img src=".gitbook/assets/image.png" alt=""><br><img src=".gitbook/assets/image (3).png" alt=""></p>                       |
+<table data-header-hidden><thead><tr><th width="194.21971252566738"></th><th width="387.3808951771049"></th></tr></thead><tbody><tr><td><strong>Nombre</strong></td><td><strong>Línea de bloques</strong></td></tr><tr><td><strong>Tareas</strong></td><td><ol><li>Bandera de Ucrania </li><li>Bandera de Polonia </li><li>Bandera de Hungría </li><li>Bandera de Bulgaria </li><li>Bandera de Austria</li></ol></td></tr><tr><td><strong>Código</strong></td><td><img src=".gitbook/assets/image (2) (1).png" alt=""><br><img src=".gitbook/assets/image (1).png" alt=""></td></tr><tr><td><strong>Resultados</strong></td><td><img src=".gitbook/assets/image.png" alt=""><br><img src=".gitbook/assets/image (3).png" alt=""></td></tr></tbody></table>
 
-## Творче завдання
+## Tarea creativa
 
-З'єднайте створене футбольне поле та підготовлені прапори:
+Conecte el campo de fútbol creado con las banderas preparadas:
 
 ![](<.gitbook/assets/image (5).png>)
 
-## Супертворче завдання
+## Tarea súper creativa
 
-Поставте прапори на флагштоках.
+Coloque banderas en los mástiles.
 
-## [**Ліхтар з використанням координат**](https://makecode.com/\_0LjY9W0tV5pD)
+## [**Faroles usando coordenadas**](https://makecode.com/\_0LjY9W0tV5pD)
 
-| Завдання  | Розмістіть ліхтарі на вежах з використанням координат                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Код       | ![](https://lh4.googleusercontent.com/bmb0P4C-GUJ9jLj7FymUhgevFNqY0HFZ18cSlym1PpgnBLCNcZ2e1rXv1rbidZKmiTpEPt4pUN8hc81quLGpNzXKfTYT741R7hzG-Ka8DXnjyffXDueUUGhhrZ6eYVBap9O0XBHff4F397f5zYmm1y2qZy-r\_ketfzCRfQQ2cb1bTbyJJr\_0-zcZnf7L)![](https://lh4.googleusercontent.com/n\_FAnoLCdCZvMVY8\_COlKwUcoX2VNH61FSd69JI7iACltbY4ZuRFf\_b9BfTBJy-XtJjTi\_gta3di7RIVIHEUm2AnHJxEpsWVssU98zYFM3MKCyR-tCze8zG1jdGY6ZZMqyetMjHvNE9t3t\_AMbbsmoilAOpQdQWN9IvoUeZvqobwWnAJuLCY5QdTDVT6) |
-| Результат | ![](https://lh5.googleusercontent.com/fibWCyNJb8kXEJBBaQSAAxH4wIgK355-kJWYW25OFVlLYGQMTd7y01OtxIYJ9bw208RXWLqSwg-WQIAxCnpL7IBt2Y43eSKmKM0H4vet3YicknGReDIC3Xaf-Dc44X2FJyJP18ZLu8yhNeuuZwZdw0tfZHUGn1t2KYxl\_PWhz79q0CqvW2ndnxd8r5-i)![](https://lh5.googleusercontent.com/uqdfFFwMjqo28BJyGo3Q1PNAVBUTacW0FoDyI2-Ewn8cJmPAfRJFwRmYZ7tfn4whkhtmm8VT7haF8zzI-Y41wbrgwve1oVZWiVCLhebwT6QTHxx3\_svNBOwrWxHtj3CIEOpovQkotBh3peYS3UmMO-m2liMd5ZrCcDdxHImk9UsELQLp26y\_5jrPXwXx)     |
+<table data-header-hidden><thead><tr><th width="192"></th><th></th></tr></thead><tbody><tr><td>Tarea</td><td>Coloque los faroles en las torres utilizando las coordenadas</td></tr><tr><td>Código</td><td><img src="https://lh4.googleusercontent.com/bmb0P4C-GUJ9jLj7FymUhgevFNqY0HFZ18cSlym1PpgnBLCNcZ2e1rXv1rbidZKmiTpEPt4pUN8hc81quLGpNzXKfTYT741R7hzG-Ka8DXnjyffXDueUUGhhrZ6eYVBap9O0XBHff4F397f5zYmm1y2qZy-r_ketfzCRfQQ2cb1bTbyJJr_0-zcZnf7L" alt=""><img src="https://lh4.googleusercontent.com/n_FAnoLCdCZvMVY8_COlKwUcoX2VNH61FSd69JI7iACltbY4ZuRFf_b9BfTBJy-XtJjTi_gta3di7RIVIHEUm2AnHJxEpsWVssU98zYFM3MKCyR-tCze8zG1jdGY6ZZMqyetMjHvNE9t3t_AMbbsmoilAOpQdQWN9IvoUeZvqobwWnAJuLCY5QdTDVT6" alt=""></td></tr><tr><td>Resultado</td><td><img src="https://lh5.googleusercontent.com/fibWCyNJb8kXEJBBaQSAAxH4wIgK355-kJWYW25OFVlLYGQMTd7y01OtxIYJ9bw208RXWLqSwg-WQIAxCnpL7IBt2Y43eSKmKM0H4vet3YicknGReDIC3Xaf-Dc44X2FJyJP18ZLu8yhNeuuZwZdw0tfZHUGn1t2KYxl_PWhz79q0CqvW2ndnxd8r5-i" alt=""><img src="https://lh5.googleusercontent.com/uqdfFFwMjqo28BJyGo3Q1PNAVBUTacW0FoDyI2-Ewn8cJmPAfRJFwRmYZ7tfn4whkhtmm8VT7haF8zzI-Y41wbrgwve1oVZWiVCLhebwT6QTHxx3_svNBOwrWxHtj3CIEOpovQkotBh3peYS3UmMO-m2liMd5ZrCcDdxHImk9UsELQLp26y_5jrPXwXx" alt=""></td></tr></tbody></table>
 
-### [Голем](https://makecode.com/\_9jkPW1PE05DU)
+### [Gólem](https://makecode.com/\_9jkPW1PE05DU)
 
-|            |                                         |
-| ---------- | --------------------------------------- |
-| Завдання:  | Використовуючи агента, побудуйте голема |
-| Результат: | ![](.gitbook/assets/3.png)              |
-| Код:       | ![](.gitbook/assets/4.png)              |
+<table><thead><tr><th width="201"></th><th></th></tr></thead><tbody><tr><td>Tarea:</td><td>Usando el agente, construya un gólem.</td></tr><tr><td>Resultado:</td><td><img src=".gitbook/assets/3.png" alt=""> </td></tr><tr><td>Código:</td><td><img src=".gitbook/assets/4.png" alt=""></td></tr></tbody></table>
 
-## Самостійно
+## Trabajo individual
 
-1. Напишіть код, щоб було прокладено лінію з **5 блоків** **цегли** від координати (\~0;\~0;\~1) до координати (\~0;\~0;\~5)&#x20;
-2. Напишіть код, щоб було прокладено лінію з **7 блоків ТНТ**
+1. Escribir el código para colocar una línea de **5 bloques de ladrillo** desde la coordenada (\~0;\~0;\~1) hasta la coordenada (\~0;\~0;\~5)
+2. Escribir el código para colocar una línea de 7 **bloques de TNT**
 
-### [Можлива відповідь](https://sun-rabbit-493.notion.site/3-d9328af5e2a34b76a64684aa958f8a3d)
+### [Posible respuesta](https://sun-rabbit-493.notion.site/3-d9328af5e2a34b76a64684aa958f8a3d)
 
 {% hint style="success" %}
-Готово! Ви чудові!:tada:
+¡Listo! ¡Son los mejores!:tada:
 {% endhint %}
 
-![Підсумки заняття](<.gitbook/assets/Group 2395 укр.png>)
+![Resultados del día](<.gitbook/assets/Group 2395 укр.png>)
 
-## **Домашнє завдання**
+## **Tarea**
 
-### Завдання 1
+### Tarea 1
 
-Прокладіть лінію з 5 блоків Багаття від координати (\~0;\~0;\~1) до координати (\~0;\~0;\~5)
+Coloque una línea de 5 bloques de Hoguera desde la coordenada (\~0;\~0;\~1) hasta la coordenada (\~0;\~0;\~5)
 
-### Завдання 2
+### Tarea 2
 
-Створіть квадрат 4 х 4 з блоків води у землі від координати (\~1;\~1;\~1) до координати (\~4;\~-1;\~4)
+Cree un cuadrado de 4x4 con bloques de agua en la tierra desde la coordenada (\~1;\~1;\~1) hasta la coordenada (\~4~~;~~\~1;\~4)
 
-### **Завдання 3 (додатково)** 💃🕺
+### Tarea **3 (**adicional**)** 💃🕺
 
-Побудувати підлогу, що світиться (танцпол)
+Construya una pista de baile iluminada (pista de baile)
 
-### Завдання 4 **** (додатково) 🤾🏻‍♀️
+### Tarea 4 (adicional) 🤾🏻‍♀️
 
-Побудова Батут, де Герой при умові «відскок» буде телепортуватися в координати (0,5,0).
+Construya un trampolín, donde el Héroe, en caso de un "rebote", será teletransportado a las coordenadas (0,5,0)
 
 {% hint style="success" %}
-На наступному занятті ми продовжимо подорож Стародавнім Єгиптом і побудуємо одне з чудес світу! Ви отримаєте навички, необхідні для вашого проєкту😉
+En la próxima clase, continuaremos nuestro viaje por el Antiguo Egipto y construiremos una de las maravillas del mundo. Obtendra las habilidades necesarias para tu proyecto 😉
 {% endhint %}

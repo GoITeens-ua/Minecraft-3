@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Подорож до Стародавнього Єгипту](README.md)
-* [⭐️Домашнє завдання⭐️](domashnye-zavdannya.md)
+* [Viaje al Antiguo Egipto](README.md)
+* [⭐️Tarea⭐️](tarea.md)
